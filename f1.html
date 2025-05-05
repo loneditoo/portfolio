@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legendary Drivers</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        h1 {
+            font-size: 50px;
+            color: red;
+            text-shadow: 2px 2px 5px black;
+            margin-bottom: 30px;
+        }
+
+        .driver-card {
+            background: linear-gradient(to right, #333, #555);
+            border: 2px solid red;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 600px;
+            text-align: left;
+            box-shadow: 0 4px 10px rgba(255, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: default; /* Default cursor */
+        }
+
+        .driver-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px red;
+            cursor: url('./assets/images/car-cursor.png'), auto; /* Custom car cursor */
+        }
+
+        .driver-card h2 {
+            font-size: 28px;
+            color: #ffcc00;
+            margin-bottom: 10px;
+        }
+
+        .driver-card p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .search-bar {
+            margin-bottom: 20px;
+            padding: 10px;
+            width: 80%;
+            max-width: 400px;
+            font-size: 18px;
+            border: 2px solid red;
+            border-radius: 5px;
+        }
+
+        .toggle-theme-btn {
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .toggle-theme-btn:hover {
+            background-color: white;
+            color: red;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Legendary Drivers</h1>
+
+    <!-- Search Bar -->
+    <input type="text" id="searchBar" class="search-bar" placeholder="Search for a driver...">
+
+    <!-- Toggle Theme Button -->
+    <button id="toggleThemeBtn" class="toggle-theme-btn">Toggle Dark/Light Mode</button>
+
+    <!-- Driver Cards -->
+    <div id="drivers">
+        <div class="driver-card" data-name="Ayrton Senna">
+            <h2>Ayrton Senna</h2>
+            <p>
+                Ayrton Senna is widely regarded as one of the greatest Formula 1 drivers of all time. 
+                A three-time World Champion (1988, 1990, 1991), Senna was known for his incredible speed, 
+                precision, and dominance in wet conditions. His rivalry with Alain Prost is legendary, 
+                and his tragic death at the 1994 San Marino Grand Prix left a lasting legacy in motorsport.
+            </p>
+        </div>
+
+        <div class="driver-card" data-name="Michael Schumacher">
+            <h2>Michael Schumacher</h2>
+            <p>
+                Michael Schumacher is a seven-time Formula 1 World Champion (1994, 1995, 2000-2004) and 
+                is considered one of the most successful drivers in the history of the sport. Known for 
+                his relentless determination and technical skill, Schumacher dominated the early 2000s 
+                with Ferrari, setting numerous records that stood for years.
+            </p>
+        </div>
+
+        <div class="driver-card" data-name="Lewis Hamilton">
+            <h2>Lewis Hamilton</h2>
+            <p>
+                Lewis Hamilton is a seven-time Formula 1 World Champion (2008, 2014-2015, 2017-2020) and 
+                holds the record for the most pole positions and race wins in F1 history. Known for his 
+                consistency, adaptability, and activism off the track, Hamilton has redefined modern Formula 1.
+            </p>
+        </div>
+
+        <div class="driver-card" data-name="Max Verstappen">
+            <h2>Max Verstappen</h2>
+            <p>
+                Max Verstappen is a two-time Formula 1 World Champion (2021, 2022) and is known for his 
+                aggressive driving style and incredible racecraft. As one of the youngest drivers to win 
+                a Grand Prix, Verstappen has quickly become one of the most dominant figures in modern F1.
+            </p>
+        </div>
+
+        <div class="driver-card" data-name="Charles Leclerc">
+            <h2>Charles Leclerc</h2>
+            <p>
+                Charles Leclerc is a rising star in Formula 1, known for his raw talent and impressive 
+                performances with Ferrari. A multiple Grand Prix winner, Leclerc has shown exceptional 
+                skill in qualifying and is considered one of the brightest talents of his generation.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Search functionality
+        const searchBar = document.getElementById('searchBar');
+        const driverCards = document.querySelectorAll('.driver-card');
+
+        searchBar.addEventListener('input', () => {
+            const searchText = searchBar.value.toLowerCase();
+            driverCards.forEach(card => {
+                const driverName = card.getAttribute('data-name').toLowerCase();
+                if (driverName.includes(searchText)) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        });
+
+        // Toggle dark/light mode
+        const toggleThemeBtn = document.getElementById('toggleThemeBtn');
+        toggleThemeBtn.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+            if (document.body.classList.contains('light-mode')) {
+                document.body.style.backgroundColor = 'white';
+                document.body.style.color = 'black';
+                toggleThemeBtn.textContent = 'Toggle Dark Mode';
+            } else {
+                document.body.style.backgroundColor = 'black';
+                document.body.style.color = 'white';
+                toggleThemeBtn.textContent = 'Toggle Light Mode';
+            }
+        });
+    </script>
+</body>
+</html>

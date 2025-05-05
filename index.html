@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motorsport Enthusiast Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            position: relative;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url('./assets/images/bg/f3.jpg'); /* Default background image */
+            transition: background-image 1s ease-in-out; /* Smooth transition for background changes */
+            color: white;
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 40px;
+            height: 70px;
+            border-bottom: 3px solid rgba(255, 0, 0, 0.8); /* Semi-transparent red border */
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: rgba(255, 0, 0, 0.8); /* Semi-transparent red hover effect */
+        }
+
+        .center-heading {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 50px;
+            color: white;
+            text-align: center;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8); /* Dark shadow for better readability */
+            animation: fadeIn 2s ease-in-out;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+            padding: 20px 40px;
+            border-radius: 10px;
+        }
+
+        .center-heading span {
+            display: block;
+        }
+
+        .intro-paragraph {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70%;
+            max-width: 900px;
+            font-size: 20px;
+            line-height: 1.8;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6); /* Subtle shadow for depth */
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 14px;
+            border-top: 2px solid rgba(255, 0, 0, 0.8); /* Semi-transparent red border */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <a href="#">Metalacrobat</a>
+        </div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="auto.html">Auto Enthusiast</a>
+            <a href="artist.html">Sketches</a>
+            <a href="developer.html">About Me</a>
+        </div>
+    </div>
+
+    <!-- Center Heading -->
+    <h1 class="center-heading">
+        <span>I am</span>
+        <span>Passionate About Motorsport</span>
+    </h1>
+
+    <!-- Introduction Paragraph -->
+    <div class="intro-paragraph">
+        <p>
+            Welcome to my portfolio! I am a motorsport enthusiast and a coding aficionado. My passion lies in the thrill of speed, 
+            the art of precision, and the creativity of problem-solving. From exploring the world of cars to crafting innovative 
+            software solutions, I strive to merge my love for motorsports with my expertise in technology. Join me on this journey 
+            as I share my projects, ideas, and inspirations.
+        </p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        &copy; 2025 Metalacrobat. All rights reserved.
+    </div>
+</body>
+</html>

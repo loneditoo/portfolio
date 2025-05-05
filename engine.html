@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Engines Work</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif; /* Modern font */
+            background-color: #1a1a1a; /* Dark metallic background */
+            color: #e0e0e0; /* Light text color */
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: #ff4d4d; /* Bold red for headings */
+            text-shadow: 2px 2px 5px black;
+        }
+
+        h3 {
+            font-size: 24px;
+            margin-top: 20px;
+            color: #ffcc00; /* Yellow for subheadings */
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff4d4d;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #e0e0e0;
+            color: #ff4d4d;
+            transform: scale(1.1);
+            border: 2px solid #ff4d4d;
+        }
+
+        img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 3px solid #ff4d4d; /* Red border for images */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .content-container {
+            background: linear-gradient(to bottom, #2c2c2c, #1a1a1a); /* Metallic gradient */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .gear-icon {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: url('./assets/images/gear-icon.png') no-repeat center center;
+            background-size: contain;
+            margin: 10px;
+        }
+
+        .header-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header-container h1 {
+            display: inline-block;
+            position: relative;
+        }
+
+        .header-container h1::before,
+        .header-container h1::after {
+            content: '';
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: url('./assets/images/gear-icon.png') no-repeat center center;
+            background-size: contain;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .header-container h1::before {
+            left: -60px;
+        }
+
+        .header-container h1::after {
+            right: -60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <h1>How Engines Work</h1>
+    </div>
+    <div class="content-container">
+        <h2>🚗 Let's Dive into the World of Engines! 🔧</h2>
+        <p>
+            Engines are the heart of any vehicle. They convert fuel into mechanical energy, which powers the vehicle. 
+            There are various types of engines, including internal combustion engines, electric motors, and hybrid engines. 
+            Each type has its own unique working mechanism and advantages. 🌟
+        </p>
+
+        <h2>🔥 Four-Stroke Internal Combustion Engine 🚀</h2>
+        <p>
+            The four-stroke internal combustion engine is the most common type of engine used in automobiles. 
+            It operates on the principle of converting the chemical energy of fuel into mechanical energy through a series of controlled explosions. 💥
+            The engine consists of several key components, including the cylinder, piston, crankshaft, camshaft, valves, and spark plug (in gasoline engines). ⚙️
+        </p>
+        <img src="./assets/images/stock-vector-four-stroke-internal-combustion-engine-vector-illustration-1307904541.jpg" alt="Four-Stroke Engine Diagram">
+        <p>
+            The four-stroke cycle consists of four distinct strokes: intake, compression, power, and exhaust. 
+            Understanding how engines work is essential for anyone interested in automobiles, as it provides insight into the technology that powers our vehicles. 🚘
+        </p>
+
+        <h3>1️⃣ Intake Stroke 🌬️</h3>
+        <p>
+            The intake stroke begins when the piston moves downward from the top of the cylinder (Top Dead Center or TDC) to the bottom (Bottom Dead Center or BDC). 
+            During this stroke, the intake valve opens, allowing the air-fuel mixture to enter the cylinder. 🛠️
+        </p>
+
+        <h3>2️⃣ Compression Stroke 💨</h3>
+        <p>
+            In the compression stroke, the piston moves upward from BDC to TDC. Both the intake and exhaust valves are closed, sealing the cylinder. 
+            The air-fuel mixture is compressed into a smaller space, increasing its pressure and temperature. 🔥
+        </p>
+
+        <h3>3️⃣ Power Stroke ⚡</h3>
+        <p>
+            The power stroke is where the engine generates power. At TDC, the compressed air-fuel mixture is ignited by a spark plug (in gasoline engines) 
+            or by the heat of compression (in diesel engines). The explosion forces the piston downward with great force. 💥🚀
+        </p>
+
+        <h3>4️⃣ Exhaust Stroke 🌫️</h3>
+        <p>
+            The exhaust stroke expels the burnt gases from the cylinder. The piston moves upward from BDC to TDC, and the exhaust valve opens. 
+            The upward motion of the piston pushes the exhaust gases out through the exhaust valve and into the exhaust system. ♻️
+        </p>
+    </div>
+      
+
+    <a href="auto.html">Back to Auto Blog</a>
+</body>
+</html>

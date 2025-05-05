@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto Mono', monospace; /* Futuristic font */
+            background-color: #0d1117; /* Dark theme */
+            color: #c9d1d9; /* Light text color */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Home Button */
+        .home-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #ffe81f; /* Star Wars yellow */
+            background-color: transparent;
+            text-decoration: none;
+            border: 2px solid #ffe81f; /* Yellow border */
+            border-radius: 5px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: 'Star Jedi', sans-serif; /* Star Wars font */
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+
+        .home-button:hover {
+            background-color: #ffe81f; /* Yellow background on hover */
+            color: #000; /* Black text on hover */
+            transform: scale(1.1) rotate(-3deg); /* Slight rotation for interactivity */
+            box-shadow: 0 0 20px #ffe81f, 0 0 40px #ffe81f; /* Glowing effect */
+        }
+
+        .home-button::after {
+            content: "May the Force be with you!";
+            display: block;
+            font-size: 12px;
+            color: #ffe81f; /* Star Wars yellow */
+            margin-top: 5px;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .home-button:hover::after {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes star-wars-glow {
+            0% {
+            box-shadow: 0 0 10px #ffe81f, 0 0 20px #ffe81f;
+            }
+            100% {
+            box-shadow: 0 0 20px #ffe81f, 0 0 40px #ffe81f;
+            }
+        }
+
+        .home-button {
+            animation: star-wars-glow 1.5s infinite alternate;
+        }
+
+        h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #58a6ff; /* Neon blue */
+            text-shadow: 0 0 10px #58a6ff, 0 0 20px #58a6ff;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #58a6ff, 0 0 20px #58a6ff;
+            }
+            to {
+                text-shadow: 0 0 20px #58a6ff, 0 0 30px #58a6ff;
+            }
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin: 10px 0;
+            color: #8b949e; /* Subtle text color */
+        }
+
+        .about-me-section {
+            margin-top: 30px;
+            max-width: 800px;
+            text-align: left;
+        }
+
+        .about-me-section h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #39d353; /* Neon green */
+            border-bottom: 2px solid #39d353;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .skills-section {
+            margin-top: 40px;
+            width: 100%;
+        }
+
+        .skills-section h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #f78166; /* Neon orange */
+            border-bottom: 2px solid #f78166;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        .skill {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #161b22; /* Dark card background */
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .skill:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px #58a6ff; /* Neon blue glow */
+        }
+
+        .skill img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+            border-radius: 50%;
+            border: 2px solid #58a6ff;
+        }
+
+        .skill span {
+            font-size: 18px;
+            font-weight: bold;
+            color: #c9d1d9;
+        }
+
+        .neon-hover {
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        .neon-hover:hover {
+            color: #39d353; /* Neon green */
+            text-shadow: 0 0 10px #39d353, 0 0 20px #39d353;
+        }
+    </style>
+</head>
+<body>
+    <!-- Home Button -->
+    <a href="index.html" class="home-button">Home</a>
+    <p style="position: absolute; top: 60px; left: 20px; font-size: 12px; color: #8b949e; max-width: 180px; text-align: left; font-style: italic; opacity: 0; transition: opacity 0.3s ease;">
+        Use the Force to return to the homepage!
+    </p>
+
+    <script>
+        const homeButton = document.querySelector('.home-button');
+        const comment = document.querySelector('p[style*="Use the Force"]');
+
+        homeButton.addEventListener('mouseover', () => {
+            comment.style.opacity = '1';
+        });
+
+        homeButton.addEventListener('mouseout', () => {
+            comment.style.opacity = '0';
+        });
+    </script>
+
+    <h1 class="neon-hover">I am Somebody Nobody</h1>
+    <p>My name is <strong style="color: #f78166;">Metalacrobat</strong>.</p>
+    <p>I am a passionate developer with a <span style="color: #39d353;">Bachelor's degree in Technology</span>.</p>
+
+    <div class="skills-section">
+        <h2>Languages & Frameworks</h2>
+        <div class="skills-grid">
+            <div class="skill">
+                <img src="./assets/images/html-5.362x512.png" alt="HTML Icon">
+                <span>HTML</span>
+            </div>
+            <div class="skill">
+                <img src="./assets/images/css-3.362x512.png" alt="CSS Icon">
+                <span>CSS</span>
+            </div>
+            <div class="skill">
+                <img src="./assets/images/javascript-js-square.511x512.png" alt="JavaScript Icon">
+                <span>JavaScript</span>
+            </div>
+            <div class="skill">
+                <img src="./assets/images/windows.504x512.png" alt="Windows Icon">
+                <span>Windows</span>
+            </div>
+            <div class="skill">
+                <img src="./assets/images/arch-linux.512x512.png" alt="Linux Icon">
+                <span>Linux</span>
+            </div>
+            <div class="skill">
+                <img src="./assets/images/rust.256x256.png" alt="Rust Icon">
+                <span>Rust</span>
+            </div>
+            <div class="skill">
+                <img src="./assets/images/nix.256x223.png" alt="Nix Icon">
+                <span>Nix</span>
+            </div>
+            <div class="skill">
+                <img src="./assets/images/icons8-power-bi-48.png" alt="Power BI Icon">
+                <span>Power BI</span>
+            </div>
+            <div class="skill">
+                <img src="./assets/images/sql-database-generic.380x512.png" alt="SQL Icon">
+                <span>SQL</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-me-section">
+        <h2>About Me</h2>
+        <p>
+            I am a <span style="color: #f78166;">curious</span> and <span style="color: #39d353;">driven</span> individual who loves solving problems and creating innovative solutions. 
+            My journey as a developer began with a fascination for technology and its ability to transform lives. 
+            Over the years, I have honed my skills in various programming languages, frameworks, and tools, 
+            and I am always eager to learn more.
+        </p>
+        <p>
+            Beyond coding, I am deeply passionate about exploring the intersection of <span style="color: #58a6ff;">art</span> and <span style="color: #39d353;">technology</span>. 
+            I believe that creativity and logic go hand in hand, and I strive to bring a unique perspective 
+            to every project I work on. Whether it's designing intuitive user interfaces, optimizing backend systems, 
+            or experimenting with new technologies, I am always up for a challenge.
+        </p>
+        <p>
+            In my free time, I enjoy <span style="color: #f78166;">sketching</span>, tinkering with open-source projects, and contributing to the tech community. 
+            I am also an avid learner who loves diving into books, tutorials, and courses to expand my knowledge.
+        </p>
+    </div>
+</body>
+</html>

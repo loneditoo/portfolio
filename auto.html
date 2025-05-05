@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motorsport Blog</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            line-height: 1.6;
+        }
+
+        .navbar {
+            background-color: #222;
+            padding: 10px 20px;
+            text-align: center;
+            border-bottom: 3px solid red;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: red;
+        }
+
+        .header {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(to bottom, black, #333);
+            color: red;
+        }
+
+        .header h1 {
+            font-size: 60px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        .header p {
+            font-size: 20px;
+            color: white;
+        }
+
+        .blog-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .blog-card {
+            background: linear-gradient(to bottom, #333, black);
+            border: 2px solid red;
+            border-radius: 10px;
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(255, 0, 0, 0.5);
+        }
+
+        .blog-card img {
+            width: 100%;
+            border-radius: 10px;
+            border: 2px solid red;
+        }
+
+        .blog-card h3 {
+            margin: 15px 0 10px;
+            font-size: 24px;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        .blog-card p {
+            font-size: 16px;
+            color: #ccc;
+        }
+
+        .blog-card a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .blog-card a:hover {
+            background-color: white;
+            color: red;
+            border: 2px solid red;
+        }
+
+        .checkered-footer {
+            margin-top: 50px;
+            background: repeating-linear-gradient(
+                45deg,
+                black 0,
+                black 10px,
+                white 10px,
+                white 20px
+            );
+            padding: 20px;
+            text-align: center;
+            color: black;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="developer.html">About Me</a>
+        <a href="auto.html">Motorsport Blog</a>
+    </div>
+    <div class="header">
+        <h1>Welcome to My Motorsport Blog</h1>
+        <p>Sharing my passion for cars, bikes, and everything motorsport!</p>
+    </div>
+    <div class="blog-container">
+        <div class="blog-card">
+            <img src="./assets/images/engine.jpg" alt="Engines">
+            <h3>How Engines Work</h3>
+            <p>Explore the types of engines and their working.</p>
+            <a href="engine.html">Read More</a>
+        </div>
+        <div class="blog-card">
+            <img src="./assets/images/fer.jpg" alt="Formula 1">
+            <h3>Formula 1</h3>
+            <p>A journey through the timeless beauty of F1 cars.</p>
+            <a href="f1.html">Read More</a>
+        </div>
+        <div class="blog-card">
+            <img src="./assets/images/1968 Dodge Charger powered by 1000Hp Hellephant crate engine.jpg" alt="Hybrid">
+            <h3>Electric Revolution</h3>
+            <p>How electric vehicles are shaping the future of transportation.</p>
+            <a href="#">Read More</a>
+        </div>
+    </div>
+    <div class="checkered-footer">
+        <p>Keep Racing Forward!</p>
+    </div>
+</body>
+</html>
